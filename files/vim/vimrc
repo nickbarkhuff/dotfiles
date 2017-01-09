@@ -1,0 +1,149 @@
+" IMPORTANT
+    " Don't use Vi compatibility mode (must be first command!)
+    set nocompatible
+
+
+
+" VARIABLES
+    " C++
+    let cpp_filename = "a.out"
+    let cpp_files = "*.cpp"
+    let cpp_flags = "-g -Wall -Werror"
+
+
+
+" PLUGINS
+    " Pathogen Config
+    runtime bundle/vim-pathogen/autoload/pathogen.vim
+    call pathogen#infect()
+    call pathogen#helptags()
+
+    " Enable Plugins
+    filetype plugin indent on
+
+    " Plugin Settings
+        " Airline
+            " Always on
+            set laststatus=2 
+
+            " Use Powerline fonts
+            let g:airline_powerline_fonts = 1
+
+        " CtrlP
+            " Default to Mixed mode
+            let g:ctrlp_cmd = 'CtrlPMixed'
+
+            " Search hidden files/directories
+            let g:ctrlp_show_hidden = 1
+
+        " Auto Pairs
+            " Enable fly mode
+            let g:AutoPairsFlyMode = 1
+
+
+
+" SETTINGS
+    " General
+    set ruler
+    set wrap
+    set showcmd
+    set hidden
+    set splitright
+    set noerrorbells
+    set shortmess+=I
+    set backspace=indent,eol,start
+    set sessionoptions=blank,buffers,tabpages,curdir
+
+    " No Swap or Backup files
+    set nobackup
+    set nowritebackup
+    set noswapfile
+
+    " Tabs
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set expandtab
+
+    " Search
+    set incsearch
+    set hlsearch
+    set ignorecase
+    set smartcase
+
+    " Indent
+    set autoindent
+    set smartindent
+
+    " Line Numbering
+    set number
+    set relativenumber
+
+    " Scroll Margins
+    set scrolloff=5
+    set sidescrolloff=5
+
+    " WildMenu
+    set wildmenu
+    set wildmode=list:full,full
+
+    " Appearance
+    syntax enable
+    set t_Co=256
+    color monokai
+    hi MatchParen cterm=bold ctermbg=none ctermfg=196
+
+
+
+" KEY BINDS
+    " General
+        " Remap '?' to clear search highlighting
+        nnoremap <silent> ? :noh<return>
+
+        " Make up and down movement through wrapped lines work as expected
+        nnoremap <expr> j v:count ? 'j':'gj'
+        nnoremap <expr> k v:count ? 'k':'gk'
+
+
+    " Plugins
+        " NERD Commenter
+            " Toggle commenting with Space in visual mode
+            vmap <space> <leader>c<space>
+
+        " Auto Pairs
+            " Step outside pair
+            inoremap <c-j> <right>
+
+            " Jump back and insert closing character
+            let g:AutoPairsShortcutBackInsert = '<c-k>'
+
+
+    " Function Keys
+        " Exit Vim
+        nnoremap <silent> <F1> :qa<return>
+        inoremap <silent> <F1> <esc>:qa<return>
+
+        " Reload current file from disk
+        nnoremap <silent> <F2> :e!<return>
+        inoremap <silent> <F2> <esc>:e!<return>
+
+        " Write all files
+        nnoremap <silent> <F4> :wa<return>
+        inoremap <silent> <F4> <esc>:wa<return>
+
+        " Copy / paste from the system clipboard
+        nnoremap <silent> <F9> :%y+<return>
+        inoremap <silent> <F9> <esc>:set paste<return>"+p:set nopaste<return>a
+
+        " Save session
+        nnoremap <silent> <F10> :echom "Session saved."<return>:mksession! vimsession<return>
+        inoremap <silent> <F10> <esc>:echom "Session saved."<return>:mksession! vimsession<return>
+
+        " C++
+            " Write all, compile and run
+            nnoremap <silent> <F5> :wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && ./'.cpp_filename<return>
+            inoremap <silent> <F5> <esc>:wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && ./'.cpp_filename<return>
+
+            " Write all, compile and use Valgrind
+            nnoremap <silent> <F6> :wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && valgrind --leak-check=full ./'.cpp_filename<return>
+            inoremap <silent> <F6> <esc>:wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && valgrind --leak-check=full ./'.cpp_filename<return>

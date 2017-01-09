@@ -1,0 +1,39 @@
+[submodule "files/vim/bundle/vim-monokai"]
+	path = files/vim/bundle/vim-monokai
+	url = https://github.com/crusoexia/vim-monokai
+[submodule "files/vim/bundle/vim-css3-syntax"]
+	path = files/vim/bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "files/vim/bundle/vim-pathogen"]
+	path = files/vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "files/vim/bundle/vim-airline"]
+	path = files/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "files/vim/bundle/ctrlp.vim"]
+	path = files/vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "files/vim/bundle/vim-fugitive"]
+	path = files/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "files/vim/bundle/tcomment_vim"]
+	path = files/vim/bundle/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim
+[submodule "files/vim/bundle/supertab"]
+	path = files/vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "files/vim/bundle/auto-pairs"]
+	path = files/vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "files/vim/bundle/vim-surround"]
+	path = files/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "files/vim/bundle/vim-repeat"]
+	path = files/vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "files/vim/bundle/emmet-vim"]
+	path = files/vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "files/vim/bundle/vim-css-color"]
+	path = files/vim/bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color

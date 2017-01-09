@@ -1,0 +1,7 @@
+[user]
+	email = npbarkhuff@gmail.com
+	name = Nick Barkhuff
+[core]
+	editor = vim
+[push]
+	default = simple
