@@ -1,15 +1,11 @@
 ##Install
-###Packages
-Make sure you have the latest versions of these programs.<br/>
-`sudo apt-get install -y git tmux vim vim-gnome g++ valgrind`<br/>
-
 ###Cloning
 Clone recursively to download all Vim plugins.<br/>
 `git clone --recursive https://github.com/nickbarkhuff/dotfiles ~/dotfiles`<br/>
 
 ###Create Symlinks
-Specify a config file from the *config* folder.<br/>
-`./install.sh MYCONFIG.txt`<br/>
+Specify a config file from the *configs* folder.<br/>
+`~/dotfiles/install.sh MYCONFIG.txt`<br/>
 
 ###Powerline Fonts
 The Vim plugin "Airline" uses special characters that are only included in Powerline fonts. To install these fonts, clone the repo below and run the provided installation script. The repository can be removed after installation. Remember to set your terminal to use one of the installed fonts.<br/>
@@ -24,10 +20,10 @@ I use *DejaVu Sans Mono for Powerline Book*, but any "for Powerline" font will w
 ##Uninstall
 ###Remove Symlinks
 Run the provided uninstall script.<br/>
-`./uninstall.sh`<br/>
+`~/dotfiles/uninstall.sh`<br/>
 
 ###Remove Repository
-Completely remove the entire repository.<br/>
+Completely remove the repository.<br/>
 `rm -rf ~/dotfiles`<br/><br/>
 
 
