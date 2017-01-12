@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Change directory to script's location
+cd "$(dirname "$0")"
+
+# Message
 echo "Uninstalling any currently installed dotfiles..."
 
 # Check if a .installed.txt file exists
