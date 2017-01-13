@@ -1,0 +1,5 @@
+[user]
+	email = nbarkhuff@willistonfinancial.com
+	name = nickbarkhuff
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
