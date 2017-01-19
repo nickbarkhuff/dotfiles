@@ -1,5 +1,0 @@
-vimrc_school ~/.vimrc
-tmux.conf    ~/.tmux.conf
-gitconfig    ~/.gitconfig
-bash_aliases ~/.bash_aliases
-inputrc      ~/.inputrc
