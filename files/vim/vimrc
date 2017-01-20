@@ -4,14 +4,6 @@
 
 
 
-" VARIABLES
-    " C++
-    let cpp_filename = "a.out"
-    let cpp_files = "*.cpp"
-    let cpp_flags = "-g -Wall -Werror"
-
-
-
 " PLUGINS
     " Pathogen Config
     runtime bundle/vim-pathogen/autoload/pathogen.vim
