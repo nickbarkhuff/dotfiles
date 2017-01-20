@@ -115,18 +115,6 @@
 
 
     " Function Keys
-        " Exit Vim
-        nnoremap <silent> <F1> :qa<return>
-        inoremap <silent> <F1> <esc>:qa<return>
-
-        " Reload current file from disk
-        nnoremap <silent> <F2> :e!<return>
-        inoremap <silent> <F2> <esc>:e!<return>
-
-        " Write all files
-        nnoremap <silent> <F4> :wa<return>
-        inoremap <silent> <F4> <esc>:wa<return>
-
         " Copy / paste from the system clipboard
         nnoremap <silent> <F9> :%y+<return>
         inoremap <silent> <F9> <esc>:set paste<return>"+p:set nopaste<return>a
@@ -134,12 +122,3 @@
         " Save session
         nnoremap <silent> <F10> :echom "Session saved."<return>:mksession! vimsession<return>
         inoremap <silent> <F10> <esc>:echom "Session saved."<return>:mksession! vimsession<return>
-
-        " C++
-            " Write all, compile and run
-            nnoremap <silent> <F5> :wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && ./'.cpp_filename<return>
-            inoremap <silent> <F5> <esc>:wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && ./'.cpp_filename<return>
-
-            " Write all, compile and use Valgrind
-            nnoremap <silent> <F6> :wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && valgrind --leak-check=full ./'.cpp_filename<return>
-            inoremap <silent> <F6> <esc>:wa<bar>execute ':!clear && g++ '.cpp_files.' -o '.cpp_filename.' '.cpp_flags.' && clear && valgrind --leak-check=full ./'.cpp_filename<return>
