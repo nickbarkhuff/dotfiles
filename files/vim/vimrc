@@ -106,10 +106,6 @@
 
 
     " Plugins
-        " NERD Commenter
-            " Toggle commenting with Space in visual mode
-            vmap <space> <leader>c<space>
-
         " Auto Pairs
             " Step outside pair
             inoremap <c-j> <right>
