@@ -97,13 +97,12 @@
         nnoremap <expr> k v:count ? 'k':'gk'
 
 
-    " Plugins
-        " Auto Pairs
-            " Step outside pair
-            inoremap <c-j> <right>
+    " Auto Pairs
+        " Step outside pair
+        inoremap <c-j> <right>
 
-            " Jump back and insert closing character
-            let g:AutoPairsShortcutBackInsert='<c-k>'
+        " Jump back and insert closing character
+        let g:AutoPairsShortcutBackInsert='<c-k>'
 
 
     " Function Keys
