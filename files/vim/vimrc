@@ -19,18 +19,18 @@
             set laststatus=2 
 
             " Use Powerline fonts
-            let g:airline_powerline_fonts = 1
+            let g:airline_powerline_fonts=1
 
         " CtrlP
             " Default to Mixed mode
-            let g:ctrlp_cmd = 'CtrlPMixed'
+            let g:ctrlp_cmd='CtrlPMixed'
 
             " Search hidden files/directories
-            let g:ctrlp_show_hidden = 1
+            let g:ctrlp_show_hidden=1
 
         " Auto Pairs
             " Enable fly mode
-            let g:AutoPairsFlyMode = 1
+            let g:AutoPairsFlyMode=1
 
 
 
@@ -103,7 +103,7 @@
             inoremap <c-j> <right>
 
             " Jump back and insert closing character
-            let g:AutoPairsShortcutBackInsert = '<c-k>'
+            let g:AutoPairsShortcutBackInsert='<c-k>'
 
 
     " Function Keys
