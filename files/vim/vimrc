@@ -107,10 +107,11 @@
 
 
     " Function Keys
-        " Copy / paste from the system clipboard
+        " Copy from system clipboard
+        inoremap <silent> <F9> <esc>:%y+<return>
         nnoremap <silent> <F9> :%y+<return>
-        inoremap <silent> <F9> <esc>:set paste<return>"+p:set nopaste<return>a
+        vnoremap <silent> <F9> :%y+<return>
 
-        " Save session
-        nnoremap <silent> <F10> :echom "Session saved."<return>:mksession! vimsession<return>
-        inoremap <silent> <F10> <esc>:echom "Session saved."<return>:mksession! vimsession<return>
+        " Paste from system clipboard
+        inoremap <silent> <F10> <esc>:set paste<return>"+p:set nopaste<return>a
+        nnoremap <silent> <F10> :set paste<return>"+p:set nopaste<return>
