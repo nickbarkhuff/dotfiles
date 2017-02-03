@@ -8,14 +8,11 @@ if ! [ -e ".installed.txt" ]; then
     echo "No dotfiles currently installed."
 else
 
-    # Counter
-    uninstalled=0
-
     # Loop through installed symlinks
     cat .installed.txt | while read line; do
 
         # Check if the symlink exists
-        if [ -h "$line" ]; then
+        if [ -L "$line" ]; then
             rm $line
             echo "UNINSTALLING $line"
         else
