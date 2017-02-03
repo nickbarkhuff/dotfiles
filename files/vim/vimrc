@@ -114,3 +114,34 @@
         " Paste from system clipboard
         inoremap <silent> <F10> <esc>:set paste<return>"+p:set nopaste<return>a
         nnoremap <silent> <F10> :set paste<return>"+p:set nopaste<return>
+
+        " Auto reload browser when a file is written to
+        inoremap <F4> <esc>:call AutoReloadToggle()<return>
+        nnoremap <F4> :call AutoReloadToggle()<return>
+
+
+
+
+
+" Auto reloading script
+let autoReloadOn = 0
+let browser = 0
+let vim = 0
+function! AutoReloadToggle()
+    if g:autoReloadOn == 0
+        echo "Auto reloading mode ON... please select your browser window."
+        let g:browser = system('xdotool selectwindow')
+        let g:vim = system('xdotool getactivewindow')
+        let g:autoReloadOn = 1
+    else
+        echo "Auto reloading mode OFF"
+        let g:autoReloadOn = 0
+    endif
+endfunction
+function! AutoReload()
+    if g:autoReloadOn == 1
+        silent exec "!xdotool windowactivate ".g:browser
+        silent exec "!xdotool key F5 && xdotool windowactivate ".g:vim
+    endif
+endfunction
+autocmd BufWrite * :call AutoReload()
