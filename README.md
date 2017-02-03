@@ -1,5 +1,5 @@
 ##Install
-###Cloning
+###Clone Repo
 Clone recursively to download all Vim plugins.<br/>
 `git clone --recursive https://github.com/nickbarkhuff/dotfiles ~/dotfiles`<br/>
 
@@ -7,7 +7,11 @@ Clone recursively to download all Vim plugins.<br/>
 Specify a config file from the *configs* folder.<br/>
 `~/dotfiles/install.sh MYCONFIG.txt`<br/>
 
-###Powerline Fonts
+###Packages
+The *packages.sh* script installs all of my desired programs/dependencies.
+`~/dotfiles/packages.sh`
+
+###Add Fonts
 The Vim plugin "Airline" uses special characters that are only included in Powerline fonts. To install these fonts, clone the repo below and run the provided installation script. The repository can be removed after installation. Remember to set your terminal to use one of the installed fonts.<br/>
 
 `git clone https://github.com/powerline/fonts ~/fonts`<br/>
