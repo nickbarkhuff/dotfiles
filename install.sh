@@ -3,21 +3,18 @@
 # Change directory to script's location
 cd "$(dirname "$0")"
 
-# Save directories of files and configs
-files="${PWD}/files"
-configs="${PWD}/configs"
-
 # Check that one (and only one) argument was provided
 if [ $# -ne 1 ]; then
     echo "ERROR: Please specify a config file."
 else
 
     # Check if the specified config file exists
-    if ! [ -e "$configs/$1" ]; then
+    if ! [ -e "configs/$1" ]; then
         echo "ERROR: Config file not found."
     else
 
         # Uninstall any existing dotfile symlinks
+        echo "Uninstalling any previously installed dotfiles."
         ./uninstall.sh
         echo "-----"
 
@@ -26,13 +23,13 @@ else
         touch .installed.txt
 
         # Read in config file
-        grep -v "^$" "$configs/$1" | while read line; do
+        grep -v "^$" "configs/$1" | while read line; do
 
             # Split on space
-            cfg=($line)
+            arg=($line)
 
             # Check that there are only two space-delimited strings on the line
-            if ! [ -z "${cfg[2]}" ]; then
+            if ! [ -z "${arg[2]}" ]; then
                 echo "ERROR: Formatting error on the following line: "
                 echo "       $line"
                 echo "       Use the following format in config files: "
@@ -41,22 +38,22 @@ else
             else
 
                 # Check that the dotfile exists
-                if ! [ -e "$files/${cfg[0]}" ]; then
-                    echo "ERROR: Couldn't find file \"files/${cfg[0]}.\""
+                if ! [ -e "files/${arg[0]}" ]; then
+                    echo "ERROR: Couldn't find file \"files/${arg[0]}.\""
                 else
 
-                    # Create symlink
-                    eval ln -s $files/${cfg[0]} ${cfg[1]} && \
+                    # Check that installing the current dotfile won't overwrite anything
+                    if [ -e "`eval echo ${arg[1]}`" ]; then
+                        echo "ERROR: File ${arg[1]} already exists; delete it and then try again."
+                    else
 
-                    # If successful, log the file to .installed.txt
-                    eval echo "${cfg[1]}" >> .installed.txt
+                        # Create symlink; if successful, log the file to .installed.txt
+                        eval ln -s "${PWD}/files/${arg[0]} ${arg[1]}" && \
+                        eval echo "${arg[1]}" >> .installed.txt && \
+                        echo "INSTALLING ${arg[1]}"
+                    fi
                 fi
             fi
         done
-
-        # Print the installed dotfiles
-        echo "-----"
-        echo "Here is a list of the dotfile symlinks I have installed: "
-        cat .installed.txt
     fi
 fi
