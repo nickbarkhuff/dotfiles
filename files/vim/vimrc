@@ -23,7 +23,7 @@
 
         " CtrlP
             " Default to Mixed mode
-            let g:ctrlp_cmd='CtrlPMixed'
+            let g:ctrlp_cmd = "CtrlPMixed"
 
             " Search hidden files/directories
             let g:ctrlp_show_hidden=1
@@ -90,7 +90,8 @@
 
 " KEY BINDS
     " Leader Key
-    let mapleader="\\"
+        let mapleader="\\"
+
 
     " General
         " Remap '?' to clear search highlighting
@@ -99,6 +100,11 @@
         " Make up and down movement through wrapped lines work as expected
         nnoremap <expr> j v:count ? 'j':'gj'
         nnoremap <expr> k v:count ? 'k':'gk'
+
+
+    " CtrlP
+        " Open in Mixed mode
+        nnoremap <space> :CtrlP<return>
 
 
     " Auto Pairs
