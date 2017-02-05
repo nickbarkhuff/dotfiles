@@ -23,7 +23,7 @@
 
         " CtrlP
             " Default to Mixed mode
-            let g:ctrlp_cmd = "CtrlPMixed"
+            let g:ctrlp_cmd='CtrlPMixed'
 
             " Search hidden files/directories
             let g:ctrlp_show_hidden=1
@@ -103,7 +103,7 @@
 
 
     " CtrlP
-        " Open in Mixed mode
+        " Open in Files mode
         nnoremap <space> :CtrlP<return>
 
 
@@ -115,12 +115,13 @@
         let g:AutoPairsShortcutBackInsert='<c-k>'
 
 
-    " Tabular Shortcuts (//, =>, =, -, :)
+    " Tabular Shortcuts (// => : | - =)
         nnoremap <silent> <leader>/ :Tabularize /[^:]\zs\/\/<return>
         nnoremap <silent> <leader>> :Tabularize /=><return>
-        nnoremap <silent> <leader>= :Tabularize /=<return>
-        nnoremap <silent> <leader>- :Tabularize /-<return>
         nnoremap <silent> <leader>: :Tabularize /:\zs<return>
+        nnoremap <silent> <leader>\| :Tabularize /\|<return>
+        nnoremap <silent> <leader>- :Tabularize /-<return>
+        nnoremap <silent> <leader>= :Tabularize /=<return>
 
 
     " Function Keys
