@@ -37,3 +37,6 @@
 [submodule "files/vim/bundle/vim-css-color"]
 	path = files/vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "files/vim/bundle/tabular"]
+	path = files/vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular

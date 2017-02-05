@@ -33,26 +33,27 @@ Completely remove the repository.<br/>
 
 ##Vim Repositories
 ###Color Schemes
-| Name          | GitHub Repo                              |
-|---------------|------------------------------------------|
-| Monokai       | https://github.com/crusoexia/vim-monokai |
+| Name            | GitHub Repo                                |
+| --------------- | ------------------------------------------ |
+| Monokai         | https://github.com/crusoexia/vim-monokai   |
 
 ###Syntax Highlighters
-| Name          | GitHub Repo                               |
-|---------------|-------------------------------------------|
-| CSS3          | https://github.com/hail2u/vim-css3-syntax |
+| Name            | GitHub Repo                                 |
+| --------------- | ------------------------------------------- |
+| CSS3            | https://github.com/hail2u/vim-css3-syntax   |
 
 ###Plugins
-| Name           | GitHub Repo                                 |
-|----------------|---------------------------------------------|
-| Pathogen       | https://github.com/tpope/vim-pathogen       |
-| Airline        | https://github.com/vim-airline/vim-airline  |
-| CtrlP          | https://github.com/ctrlpvim/ctrlp.vim       |
-| Fugitive       | https://github.com/tpope/vim-fugitive       |
-| TComment       | https://github.com/tomtom/tcomment_vim      |
-| SuperTab       | https://github.com/ervandew/supertab        |
-| Auto Pairs     | https://github.com/jiangmiao/auto-pairs     |
-| Surround       | https://github.com/tpope/vim-surround       |
-| Repeat         | https://github.com/tpope/vim-repeat         |
-| Emmet          | https://github.com/mattn/emmet-vim          |
-| CSS Color      | https://github.com/ap/vim-css-color         |
+| Name             | GitHub Repo                                   |
+| ---------------- | --------------------------------------------- |
+| Pathogen         | https://github.com/tpope/vim-pathogen         |
+| Airline          | https://github.com/vim-airline/vim-airline    |
+| CtrlP            | https://github.com/ctrlpvim/ctrlp.vim         |
+| Fugitive         | https://github.com/tpope/vim-fugitive         |
+| TComment         | https://github.com/tomtom/tcomment_vim        |
+| SuperTab         | https://github.com/ervandew/supertab          |
+| Auto Pairs       | https://github.com/jiangmiao/auto-pairs       |
+| Surround         | https://github.com/tpope/vim-surround         |
+| Repeat           | https://github.com/tpope/vim-repeat           |
+| Tabular          | https://github.com/godlygeek/tabular          |
+| Emmet            | https://github.com/mattn/emmet-vim            |
+| CSS Color        | https://github.com/ap/vim-css-color           |

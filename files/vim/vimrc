@@ -62,6 +62,7 @@
     set hlsearch
     set ignorecase
     set smartcase
+    nohlsearch
 
     " Indent
     set autoindent
@@ -88,6 +89,9 @@
 
 
 " KEY BINDS
+    " Leader Key
+    let mapleader="\\"
+
     " General
         " Remap '?' to clear search highlighting
         nnoremap <silent> ? :noh<return>
@@ -105,7 +109,19 @@
         let g:AutoPairsShortcutBackInsert='<c-k>'
 
 
+    " Tabular Shortcuts (//, =>, =, -, :)
+        nnoremap <silent> <leader>/ :Tabularize /[^:]\zs\/\/<return>
+        nnoremap <silent> <leader>> :Tabularize /=><return>
+        nnoremap <silent> <leader>= :Tabularize /=<return>
+        nnoremap <silent> <leader>- :Tabularize /-<return>
+        nnoremap <silent> <leader>: :Tabularize /:\zs<return>
+
+
     " Function Keys
+        " Toggle auto reloading
+        inoremap <F4> <esc>:call AutoReloadToggle()<return>
+        nnoremap <F4> :call AutoReloadToggle()<return>
+
         " Copy from system clipboard
         inoremap <silent> <F9> <esc>:%y+<return>
         nnoremap <silent> <F9> :%y+<return>
@@ -114,10 +130,6 @@
         " Paste from system clipboard
         inoremap <silent> <F10> <esc>:set paste<return>"+p:set nopaste<return>a
         nnoremap <silent> <F10> :set paste<return>"+p:set nopaste<return>
-
-        " Auto reload browser when a file is written to
-        inoremap <F4> <esc>:call AutoReloadToggle()<return>
-        nnoremap <F4> :call AutoReloadToggle()<return>
 
 
 
