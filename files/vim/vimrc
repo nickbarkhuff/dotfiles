@@ -108,11 +108,8 @@
 
 
     " Auto Pairs
-        " Step outside pair
-        inoremap <c-j> <right>
-
         " Jump back and insert closing character
-        let g:AutoPairsShortcutBackInsert='<c-k>'
+        let g:AutoPairsShortcutBackInsert='<c-j>'
 
 
     " Tabular Shortcuts (// => : | - =)
