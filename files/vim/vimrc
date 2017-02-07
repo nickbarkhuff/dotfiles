@@ -129,11 +129,12 @@
         " Copy from system clipboard
         inoremap <silent> <F9> <esc>:%y+<return>
         nnoremap <silent> <F9> :%y+<return>
-        vnoremap <silent> <F9> :%y+<return>
+        vnoremap <silent> <F9> "+y
 
         " Paste from system clipboard
         inoremap <silent> <F10> <esc>:set paste<return>"+p:set nopaste<return>a
         nnoremap <silent> <F10> :set paste<return>"+p:set nopaste<return>
+        vnoremap <silent> <F10> d:set paste<return>"+P:set nopaste<return>
 
 
 
