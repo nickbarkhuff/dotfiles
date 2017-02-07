@@ -160,4 +160,4 @@ function! AutoReload()
         silent exec "!xdotool key F5 && xdotool windowactivate ".g:vim
     endif
 endfunction
-autocmd BufWrite * :call AutoReload()
+autocmd BufWritePost * :call AutoReload()
