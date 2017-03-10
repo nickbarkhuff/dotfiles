@@ -147,9 +147,9 @@ let vim = 0
 function! AutoReloadToggle()
     if g:autoReloadOn == 0
         echo "Auto reloading mode ON... please select your browser window."
-        let g:browser = system('xdotool selectwindow')
-        let g:vim = system('xdotool getactivewindow')
         let g:autoReloadOn = 1
+        let g:vim = system('xdotool getactivewindow')
+        let g:browser = system('xdotool selectwindow')
     else
         echo "Auto reloading mode OFF"
         let g:autoReloadOn = 0
@@ -158,7 +158,9 @@ endfunction
 function! AutoReload()
     if g:autoReloadOn == 1
         silent exec "!xdotool windowactivate ".g:browser
-        silent exec "!xdotool key F5 && xdotool windowactivate ".g:vim
+        silent exec "!xdotool key alt+1"
+        silent exec "!xdotool key F5"
+        silent exec "!xdotool windowactivate ".g:vim
     endif
 endfunction
 autocmd BufWritePost * :call AutoReload()
