@@ -45,6 +45,7 @@
     set shortmess+=I
     set backspace=indent,eol,start
     set sessionoptions=blank,buffers,tabpages,curdir
+    set ttimeoutlen=0
 
     " No Swap or Backup files
     set nobackup
