@@ -28,6 +28,9 @@
             " Search hidden files/directories
             let g:ctrlp_show_hidden=1
 
+            " Don't zoom to projects' root
+            let g:ctrlp_working_path_mode=0
+
         " Auto Pairs
             " Enable fly mode
             let g:AutoPairsFlyMode=1
