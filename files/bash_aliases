@@ -7,14 +7,10 @@ alias ......="cd ../../../../.."
 
 
 # Git
+alias gits="git status"
+
 alias gitl="git log --all --oneline --graph --decorate"
 
 alias gitd="git diff"
 alias gitds="git diff --staged"
 alias gitda="git diff HEAD"
-
-alias gits="git status"
-
-
-# TeamSpeak
-alias ts='/opt/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
