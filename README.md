@@ -1,17 +1,17 @@
-##Install
-###Clone Repo
+## Install
+### Clone Repo
 Clone recursively to download all Vim plugins.<br/>
 `git clone --recursive https://github.com/nickbarkhuff/dotfiles ~/dotfiles`<br/>
 
-###Create Symlinks
+### Create Symlinks
 Specify a config file from the *configs* folder.<br/>
 `~/dotfiles/install.sh MYCONFIG.txt`<br/>
 
-###Get Packages
+### Get Packages
 The *packages.sh* script installs all of my desired programs/dependencies.<br/>
 `~/dotfiles/packages.sh`<br/>
 
-###Add Fonts
+### Add Fonts
 The Vim plugin "Airline" uses special characters that are only included in Powerline fonts. To install these fonts, clone the repo below and run the provided installation script. The repository can be removed after installation. Remember to set your terminal to use one of the installed fonts.<br/>
 
 `git clone https://github.com/powerline/fonts ~/fonts`<br/>
@@ -21,28 +21,28 @@ The Vim plugin "Airline" uses special characters that are only included in Power
 I use *DejaVu Sans Mono for Powerline Book*, but any "for Powerline" font will work.<br/><br/>
 
 
-##Uninstall
-###Remove Symlinks
+## Uninstall
+### Remove Symlinks
 Run the provided uninstall script.<br/>
 `~/dotfiles/uninstall.sh`<br/>
 
-###Remove Repository
+### Remove Repository
 Completely remove the repository.<br/>
 `rm -rf ~/dotfiles`<br/><br/>
 
 
-##Vim Repositories
-###Color Schemes
+## Vim Repositories
+### Color Schemes
 | Name            | GitHub Repo                                |
 | --------------- | ------------------------------------------ |
 | Monokai         | https://github.com/crusoexia/vim-monokai   |
 
-###Syntax Highlighters
+### Syntax Highlighters
 | Name            | GitHub Repo                                 |
 | --------------- | ------------------------------------------- |
 | CSS3            | https://github.com/hail2u/vim-css3-syntax   |
 
-###Plugins
+### Plugins
 | Name             | GitHub Repo                                   |
 | ---------------- | --------------------------------------------- |
 | Pathogen         | https://github.com/tpope/vim-pathogen         |
