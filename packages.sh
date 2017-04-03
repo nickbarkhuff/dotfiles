@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Install / update necessary packages
-sudo apt-get install -y git tmux vim vim-gnome xdotool
+sudo apt-get install -y git tmux vim vim-gnome xdotool tree secure-delete gparted htop
