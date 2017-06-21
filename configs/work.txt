@@ -3,4 +3,3 @@ tmux.conf      ~/.tmux.conf
 gitconfig_work ~/.gitconfig
 bash_aliases   ~/.bash_aliases
 inputrc        ~/.inputrc
-wallpapers     ~/Pictures/wallpapers
