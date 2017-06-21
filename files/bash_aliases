@@ -11,6 +11,6 @@ alias gits="git status"
 
 alias gitl="git log --all --oneline --graph --decorate"
 
-alias gitd="git diff"
-alias gitds="git diff --staged"
-alias gitda="git diff HEAD"
+alias gitda="git diff HEAD"     # Diff All
+alias gitds="git diff --staged" # Diff Staged
+alias gitdu="git diff"          # Diff Unstaged
